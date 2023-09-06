@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: azure;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 4em;
+  line-height: 1.2;
+}

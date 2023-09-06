@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Frontend Page Creation with Specific Elements</title>
+  </head>
+  <body>
+    <h1 data-testid="slackUserName">stephanie metieh</h1>
+    <img
+      data-testid="slackDisplayImage"
+      src="https://ca.slack-edge.com/T05FFAA91JP-U05R1GU75M4-0dbe0529cb55-512"
+      alt="Stephanie Metieh"
+    />
+
+    <article>
+      <h2 data-testid="currentDayOfTheWeek">Current Day of the Week:</h2>
+      <p id="currentDayOfTheWeek"></p>
+    </article>
+
+    <article>
+      <h2 data-testid="currentUTCTime">Current UTC Time:</h2>
+      <p id="currentUTCTime"></p>
+    </article>
+    <article>
+      <h2 data-testid="myTrack">Track:</h2>
+      <p>Frontend</p>
+    </article>
+    <footer>
+      <a href="https://github.com/steffieMD/steffieMD.github.io.git">
+        <i class="fa fa-github" style="font-size: 24px; color: black"></i>
+      </a>
+    </footer>
+    <script>
+      let time = document.getElementById("currentUTCTime");
+
+      setInterval(() => {
+        let d = new Date();
+        time.innerHTML = d.toLocaleTimeString();
+      }, 1000);
+
+      //   var datetime = new Date();
+      //   console.log(datetime);
+      //   document.getElementById("currentDayOfTheWeek").textContent = datetime;
+
+      const today = new Date().toLocaleDateString("en-EN", { weekday: "long" });
+      document.getElementById("currentDayOfTheWeek").textContent = today;
+    </script>
+  </body>
+</html>
