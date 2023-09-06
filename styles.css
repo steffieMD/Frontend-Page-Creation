@@ -5,6 +5,10 @@
 
 body {
   background-color: azure;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
@@ -12,4 +16,26 @@ h1 {
   text-align: center;
   font-size: 4em;
   line-height: 1.2;
+}
+
+img {
+  max-width: 600px;
+  min-width: 300px;
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+p {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+i {
+  color: purple;
+}
+
+i:hover {
+  color: brown;
 }
