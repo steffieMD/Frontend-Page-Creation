@@ -35,25 +35,24 @@
       <p>Frontend</p>
       <hr />
     </article>
-    <footer>
+    <article>
+      <h2>GitHub URL:</h2>
       <a
-        data-testid="“githubURL”"
+        data-testid="githubURL”"
         href="https://github.com/steffieMD/steffieMD.github.io.git"
+        target="_blank"
       >
-        <i class="fa fa-github" style="font-size: 24px"></i>
+        https://github.com/steffieMD/steffieMD.github.io.git
       </a>
-    </footer>
+    </article>
+
     <script>
       let time = document.getElementById("currentUTCTime");
 
       setInterval(() => {
-        let d = new Date();
-        time.innerHTML = d.toLocaleTimeString();
+        const d = new Date();
+        time.innerHTML = d.getMilliseconds();
       }, 1000);
-
-      //   var datetime = new Date();
-      //   console.log(datetime);
-      //   document.getElementById("currentDayOfTheWeek").textContent = datetime;
 
       const today = new Date().toLocaleDateString("en-EN", { weekday: "long" });
       document.getElementById("currentDayOfTheWeek").textContent = today;
