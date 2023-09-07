@@ -19,20 +19,20 @@
     />
 
     <article>
-      <h2 data-testid="currentDayOfTheWeek">Current Day of the Week:</h2>
-      <p id="currentDayOfTheWeek"></p>
+      <h2>Current Day of the Week:</h2>
+      <p data-testid="currentDayOfTheWeek"></p>
       <hr />
     </article>
 
     <article>
-      <h2 data-testid="currentUTCTime">Current UTC Time:</h2>
-      <p id="currentUTCTime"></p>
+      <h2>Current UTC Time:</h2>
+      <p data-testid="currentUTCTime"></p>
       <hr />
     </article>
 
     <article>
-      <h2 data-testid="myTrack">Track:</h2>
-      <p>Frontend</p>
+      <h2>Track:</h2>
+      <p data-testid="myTrack">Frontend</p>
       <hr />
     </article>
     <article>
@@ -47,15 +47,17 @@
     </article>
 
     <script>
-      let time = document.getElementById("currentUTCTime");
+      let time = document.querySelector(`[data-testid="currentUTCTime"]`);
 
       setInterval(() => {
         const d = new Date();
-        time.innerHTML = d.getMilliseconds();
-      }, 1000);
+        time.innerHTML = d.getUTCMilliseconds();
+      }, 100);
 
       const today = new Date().toLocaleDateString("en-EN", { weekday: "long" });
-      document.getElementById("currentDayOfTheWeek").textContent = today;
+      document.querySelector(
+        `[data-testid="currentDayOfTheWeek"]`
+      ).textContent = today;
     </script>
   </body>
 </html>
