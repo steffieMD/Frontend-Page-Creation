@@ -51,7 +51,12 @@
 
       setInterval(() => {
         const d = new Date();
-        time.textContent = d.getUTCMilliseconds();
+        const hours = d.getUTCHours();
+        const minutes = d.getUTCMinutes();
+        const seconds = d.getUTCSeconds();
+        const milliseconds = d.getUTCMilliseconds();
+
+        time.innerHTML = `${hours}:${minutes}:${seconds}.${milliseconds}`;
       }, 100);
 
       const today = new Date().toLocaleDateString("en-EN", { weekday: "long" });
