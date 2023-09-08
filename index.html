@@ -34,13 +34,8 @@
       let time = document.querySelector(`[data-testid="currentUTCTime"]`);
 
       setInterval(() => {
-        const d = new Date();
-        const hours = d.getUTCHours();
-        const minutes = d.getUTCMinutes();
-        const seconds = d.getUTCSeconds();
-        const milliseconds = d.getUTCMilliseconds();
-
-        time.innerHTML = `${hours}:${minutes}:${seconds}.${milliseconds} UTC`;
+        const d = Date.now();
+        time.innerHTML = d;
       }, 100);
 
       const today = new Date().toLocaleDateString("en-EN", { weekday: "long" });
