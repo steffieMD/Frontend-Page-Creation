@@ -1,2 +1,3 @@
-# steffieMD.github.io
-Stage 1 Task: Frontend Page Creation with Specific Elements
+Frontend-Page-Creation-with-Specific-Elements
+Stage 1 
+First Task: Frontend Page Creation with Specific Elements
