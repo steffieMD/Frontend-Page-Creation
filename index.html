@@ -7,40 +7,28 @@
     <title>Frontend Page Creation with Specific Elements</title>
   </head>
   <body>
-    <h1 data-testid="slackUserName">stephanie metieh</h1>
-    <img
-      data-testid="slackDisplayImage"
-      src="https://ca.slack-edge.com/T05FFAA91JP-U05R1GU75M4-0dbe0529cb55-512"
-      alt="devsteff"
-    />
+    <main>
+      <h1 data-testid="slackUserName">stephanie metieh</h1>
+      <img
+        data-testid="slackDisplayImage"
+        src="https://ca.slack-edge.com/T05FFAA91JP-U05R1GU75M4-0dbe0529cb55-512"
+        alt="devsteff"
+      />
 
-    <article>
-      <h2>Current Day of the Week:</h2>
       <p data-testid="currentDayOfTheWeek"></p>
-      <hr />
-    </article>
 
-    <article>
-      <h2>Current UTC Time:</h2>
       <p data-testid="currentUTCTime"></p>
-      <hr />
-    </article>
 
-    <article>
-      <h2>Track:</h2>
       <p data-testid="myTrack">Frontend</p>
-      <hr />
-    </article>
-    <article>
-      <h2>GitHub URL:</h2>
+
       <a
-        data-testid="“githubURL”"
         href="https://github.com/steffieMD/steffieMD.github.io.git"
         target="_blank"
+        data-testid="“githubURL”"
       >
         GitHub URL
       </a>
-    </article>
+    </main>
 
     <script>
       let time = document.querySelector(`[data-testid="currentUTCTime"]`);
